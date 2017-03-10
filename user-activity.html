@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>LessDepress</title>
+
+    <link rel="icon" href="">
+
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/feed.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen,projection">
+
+
+
+</head>
+
+<body>
+  <!-- start nav and side nav -->
+  <nav>
+    <div class="nav-wrapper nav-red">
+      <a href="#" class="brand-logo center">Activities <i class="fa fa-child" style="line-height: 2.5em;"></i></a>
+
+       <ul id="slide-out" class="side-nav" style="transform: translateX(0px);">
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="img/cover-3.jpg">
+            </div>
+              <a href="#!user"><img class="circle" src="img/avatar.png"></a>
+              <a href="#!name"><span class="white-text name">John Doe</span></a>
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+
+        <li><a href="user-feed.html" class="waves-effect"><i class="fa fa-feed"></i>News Feed</a></li>
+        <li><a href="profile.html" class="waves-effect"><i class="fa fa-user-circle"></i>Profile</a></li>
+
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Entertainment</a></li>
+
+        <li><a href="user-activity.html" class="waves-effect"><i class="fa fa-child"></i>Activity</a></li>
+        <li><a href="user-group.html" class="waves-effect"><i class="fa fa-users"></i>Group</a></li>
+
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Info</a></li>
+        <li><a href="#" class="waves-effect"><i class="fa fa-cog"></i>Acount Settings</a></li>
+        <li><a href="logout.php" class="waves-effect"><i class="fa fa-power-off"></i>Log Out</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+
+    </div>
+  </nav>
+  <!-- end nav and side nav -->
+
+  <!-- start main -->
+  <main>
+
+    <div class="container">
+      <div class="row">
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <section class="section-feed">
+            <p class="light" style="font-size: 1.2em;">Your to-do list</p>
+              <ul class="collection">
+              <li class="collection-item dismissable"><div>10 mins workout<a href="#!" class="secondary-content"><i class="fa fa-check"></i></a></div></li>
+              <li class="collection-item dismissable"><div>30 mins stroll<a href="#!" class="secondary-content"><i class="fa fa-check"></i></a></div></li>
+              <li class="collection-item dismissable"><div>Socialize<a href="#!" class="secondary-content"><i class="fa fa-check"></i></a></div></li>
+              <li class="collection-item dismissable"><div>Med appointment<a href="#!" class="secondary-content"><i class="fa fa-check"></i></a></div></li>
+            </ul>
+        </section>
+          </div>
+        </div>
+      </div>
+
+
+      
+      </div>
+    </div>
+
+  </main>
+  <!-- end main -->
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+      }
+    </script>
+
+
+</body>
+</html>

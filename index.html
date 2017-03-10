@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>LessDepress</title>
+
+    <link rel="icon" href="">
+
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/login.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen,projection">
+
+
+
+
+</head>
+
+<body class="valign-wrapper body-c-1">
+
+    <div class="container valign">
+        <div class="row">
+            <div class="col s12">
+                <div class=""><!-- card or without card? -->
+                    <p class="p-style wow fadeInDown" data-wow-delay=".5s">start being lessdepress</p> 
+
+                    <div class="container container-narrower">
+                        
+                    <form action="signin.php" method="POST">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="username" type="text" name="un" class="validate" minlength="6" required>
+                          <label for="username" class="label-black">Username</label>
+                        </div>
+                      
+
+                        <div class="input-field col s12">
+                          <input id="password" type="password" name="pw" class="validate" required>
+                          <label for="password" class="label-black">Password</label>
+                        </div>
+                      </div>
+                    
+   
+
+                        <div class="card-action">
+                            <div class="btn-center">
+                                <button type="submit" class="btn blue darken-2 waves-effect center-align" href="user-feed.html">Log-in</button>
+                            </div>
+                            <br>
+                            <a class="right waves-effect waves-light brown-text" href="pre-register.html" onclick=""><u>Sign-up</u></a><br> 
+                        </div>
+
+                    </form>  
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.modal').modal();
+        });
+    </script>
+    <script>
+        new WOW().init();
+    </script>
+    
+    <script>
+    var myvar = $(location).attr('search');
+    myvar = myvar.replace('?remarks=', '');
+        if(myvar =="failed"){
+            window.alert("Invalid login details");
+        }
+    </script>
+
+</body>
+</html>

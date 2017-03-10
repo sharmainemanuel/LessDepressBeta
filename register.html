@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>LessDepress</title>
+
+    <link rel="icon" href="">
+
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/login.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen,projection">
+
+
+
+
+</head>
+
+<body>
+
+    <div>
+      <div class="header-orange z-depth-2">
+          <p class="p-style wow fadeInDown" data-wow-delay=".5s">be a cure for others</p>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div class=""><!-- card or without card? --> 
+
+                    <div class="container">
+                        
+                    <form class="wow fadeIn" action="signup.php" method="POST">
+
+                      <div class="row">
+
+                        <div class="input-field col s6">
+                          <input id="name" type="text" name="fn" class="validate" required>
+                          <label for="name" class="label-black">First Name</label>
+                        </div>
+                      
+
+                        <div class="input-field col s6">
+                          <input id="lname" type="text" name="ln" class="validate" required>
+                          <label for="lname" class="label-black">Last Name</label>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+
+                        <div class="input-field col s6">
+                          <input id="username" type="text" name="un" class="validate" minlength="6" required>
+                          <label for="username" class="label-black">Username</label>
+                        </div>
+                      
+
+                        <div class="input-field col s6">
+                          <input id="password" type="password" name="pw" class="validate" required>
+                          <label for="password" class="label-black">Password</label>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+
+                        <div class="input-field col s12">
+                          <input id="email" type="email" name="em" class="validate" required>
+                          <label for="email" class="label-black">E-mail</label>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+
+                         <div class="input-field col s6">
+                          <input id="bday" type="date" name="bd" class="datepicker" required>
+                          <label for="bday" class="label-black">Birthday</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                          <input id="age" type="text" name="age" class="validate" required>
+                          <label for="age" class="label-black">Age</label>
+                        </div>
+                        
+                        <input type="hidden" id="level" name="dplvl">
+                      </div>
+                    
+   
+
+                        <div class="card-action">
+                            <div class="btn-center">
+                                <button type="submit" class="btn blue darken-2 waves-effects center-align" onclick="" href="index.html">Register</button>
+                            </div>
+                        </div>
+
+                    </form>  
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+
+        $(document).ready(function () {
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15 // Creates a dropdown of 15 years to control year
+          });
+        });
+        
+    </script>
+    <script>
+        var myresult = $(location).attr('search');
+        myresult = myresult.replace('?result=', '');
+        document.getElementById('level').value = myresult;
+    </script>
+</body>
+</html>

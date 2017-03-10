@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>LessDepress</title>
+
+    <link rel="icon" href="">
+
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/feed.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen,projection">
+
+
+
+</head>
+
+<body>
+  <!-- start nav and side nav -->
+  <nav>
+    <div class="nav-wrapper nav-red">
+      <a href="#" class="brand-logo center">Profile <i class="fa fa-user-circle" style="line-height: 2.5em;"></i></a>
+
+       <ul id="slide-out" class="side-nav" style="transform: translateX(0px);">
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="img/cover-3.jpg">
+            </div>
+              <a href="#!user"><img class="circle" src="img/avatar.png"></a>
+                <span class="Fullname white-text name" id="Fname">John</span>
+                <span class="Fullname white-text name" id="Lname">John</span> 
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+
+        <li><a href="user-feed.html" class="waves-effect"><i class="fa fa-feed"></i>News Feed</a></li>
+        <li><a href="profile.html" class="waves-effect"><i class="fa fa-user-circle"></i>Profile</a></li>
+
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Entertainment</a></li>
+
+        <li><a href="user-activity.html" class="waves-effect"><i class="fa fa-child"></i>Activity</a></li>
+        <li><a href="user-group.html" class="waves-effect"><i class="fa fa-users"></i>Group</a></li>
+
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Info</a></li>
+        <li><a href="#" class="waves-effect"><i class="fa fa-cog"></i>Acount Settings</a></li>
+        <li><a href="logout.php" class="waves-effect"><i class="fa fa-power-off"></i>Log Out</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+
+    </div>
+  </nav>
+  <!-- end nav and side nav -->
+
+  <!-- start main -->
+  <main>
+
+    <div class="container">
+      <div class="row">
+
+      <!-- profile -->
+      <section class="section-feed">
+          <div class="col s12 m6">
+          <div class="card">
+            <div class="card-header">
+                <a href="#"><div class="chip"><img src="img/avatar.png" alt="Contact Person">
+                <span id="Fname1">Jane</span> 
+                <span id="Lname1">Doe</span>
+                </div></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">About yourself</span>
+                <pre class="light flow-text">Full Name : <span id="Fname2">John</span> <span id="Lname2">Doe</span> <br>Age       : <span id="Age">18</span> <br>Address   :</pre>
+            </div>
+          </div>
+        </div>
+        </section>
+      <!-- end profile -->
+
+      <!-- start profile-post -->
+        <section class="section-feed">
+          <div class="col s12 m6">
+          <div class="card">
+            <div class="card-header">
+                <a href="#"><div class="chip"><img src="img/avatar.png" alt="Contact Person">Jane Doe</div></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Depression Level :</span>
+                <h5 id="Percent">25%</h5>
+                <div class="progress">
+                  <div id="Dpbar" class="determinate" style="width: 60%"></div>
+                </div>
+              <span class="card-title">Your Category :</span>
+              <input type="text" name="" value="Bipolar" readonly="">
+            </div>
+            <div class="card-action">
+              <div class="container container-narrow">
+                <a class="btn brown" href="#">Retake the test</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        <!-- end profile-post -->
+
+        <!-- 
+      <section class="section-feed">
+        <div class="container">
+            <div class="alert success wow fadeInLeft" data-wow-delay=".1s">
+            <span class="closebtn">&times;</span>  
+            <p class="light white-text">Successfully fullfilled you last activity!</p>
+            </div>
+
+            <div class="alert warning wow fadeInLeft" data-wow-delay=".5s">
+            <span class="closebtn">&times;</span>  
+            <p class="light white-text">Please be reminded of your to-do list to be done.</p>
+            </div>
+
+            <div class="alert white wow fadeInLeft" data-wow-delay=".9s">
+            <span class="closebtn">&times;</span>  
+            <p class="light">Please have a moment to our simple test <br>Be honest for the most accurate result.</p>
+            </div>
+        </div>
+      </section> -->
+
+
+
+        
+
+      
+      </div>
+    </div>
+
+  </main>
+  <!-- end main -->
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        });
+    </script>
+
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+      }
+    </script>
+
+    <script>
+        var mydplvl;
+
+        
+        $.ajax({
+        url:'http://localhost/LD/loginsession.php',
+        dataType:'JSON',
+        data:{},
+
+        type:'POST',
+        success:function(data){
+            console.log(data);
+            console.log(data[0].UserID);
+            
+            document.getElementById("Fname").innerHTML = data[0].Firstname;
+            
+            document.getElementById("Lname").innerHTML = data[0].Lastname;
+            
+            document.getElementById("Fname1").innerHTML = data[0].Firstname;
+            
+            document.getElementById("Lname1").innerHTML = data[0].Lastname;            
+            
+            document.getElementById("Fname2").innerHTML = data[0].Firstname;
+            
+            document.getElementById("Lname2").innerHTML = data[0].Lastname;     
+            
+            document.getElementById("Age").innerHTML = data[0].Age;     
+            
+            mydplvl = data[0].DepressionLvl;  
+            mydplvl = 100 * (mydplvl / 25);
+            
+            
+            if (mydplvl<34){ document.getElementById("Dpbar").style.backgroundColor = "green"; 
+            }
+            else if (mydplvl<67){ document.getElementById("Dpbar").style.backgroundColor = "#ff9800"; 
+            }       
+            else{
+            document.getElementById("Dpbar").style.backgroundColor = "red";                
+            }
+            
+            
+            document.getElementById("Dpbar").style.width = mydplvl+"%"; 
+            document.getElementById("Percent").innerHTML = mydplvl+"%"; 
+        }
+        });    
+    
+    </script>
+
+</body>
+</html>
